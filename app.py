@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from chatbot import ChatBot
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -36,6 +37,7 @@ def get_response():
     return jsonify({"error": "Request body must be JSON"}), 400
 
 
-if __name__ == '__main__':
-    # Start the Flask server
-    app.run(debug=True)
+if __name__ == "__main__":
+    # Get the PORT from environment variables, default to 5000 if not set
+    port = int(os.environ.get('PORT', 3000))
+    app.run(host='0.0.0.0', port=port)
