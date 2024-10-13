@@ -9,6 +9,11 @@ CORS(app)
 # Initialize the chatbot
 chatbot = ChatBot()
 
+@app.route('/test', methods=['GET'])
+def test():
+    return "Server is up!"
+
+
 @app.route('/getResponse', methods=['POST'])
 def get_response():
     """

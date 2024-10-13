@@ -35,7 +35,7 @@ def load_pdf(file_path):
 
 
 # Load the PDF file
-pdf_file_name = "libro_sabina.pdf"
+pdf_file_name = "face.pdf"
 pdf_text = load_pdf(file_path=pdf_file_name)
 
 
